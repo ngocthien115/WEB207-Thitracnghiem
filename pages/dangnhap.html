@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - FPT Polytechnic</title>
+    <link rel="stylesheet" href="../css/linhtinh.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="container1 container m-auto" id="container">
+	<div class="form-container sign-up-container">
+		<form ng-controller="dangki">
+			<h1>Tạo tài khoản</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>hoặc sử dụng email để đăng nhập</span>
+			<input ng-model="email" type="email" placeholder="Email" />
+			<input ng-model="username" type="text" placeholder="Username" />
+			<input ng-model="password" type="password" placeholder="Mật khẩu" />
+			<input ng-model="check_password" type="password" placeholder="Xác nhận mật khẩu" />
+			<button ng-click="dangki()">ĐĂNG KÍ</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form ng-controller="frmDn">
+			<h1>Đăng nhập</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook"></i></a>
+				<a href="#" class="social"><i class="fab fa-google"></i></a>
+				<a href="#" class="social"><i class="fab fa-instagram"></i></a>
+			</div>
+			<span>hoặc sử dụng tài khoản của bạn</span>
+			<input ng-model="username" type="text" placeholder="Username"/>
+			<input ng-model="pwd" type="password" placeholder="Mật khẩu" />
+			<a href="#!quenmatkhau">Quên mật khẩu?</a>
+			<button ng-click="dn()">ĐĂNG NHẬP</button>
+			<button onclick="document.location.href='trangchu.html'" class="mt-1">HOME</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Chào mừng!</h1>
+				<p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+				<button class="ghost" id="signIn">Đăng nhập</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Chào bạn!</h1>
+				<p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+				<button class="ghost" id="signUp">Đăng kí</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="../js/dangnhap.js"></script>
+<script src="../js/Students.js"></script>
+<script>
+	
+</script>
+</html>

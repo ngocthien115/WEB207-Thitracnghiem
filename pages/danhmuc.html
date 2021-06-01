@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<style>
+    .card .card-footer .card-text a{
+        text-decoration: none;
+    }
+</style>
+<div class="main" ng-controller="Danhmuc">
+    <div class="row">
+        <div class="col-sm-6 my-2" ng-repeat="sub in cacmonhoc | limitTo:4:start">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="../images/logos/{{sub.Logo}}">
+                </div>
+                <div class="card-footer">
+                    <div class="card-text text-center">
+                        <a href="#!trangthi/{{sub.Id}}/{{sub.Name}}">{{sub.Name | uppercase}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-auto">
+            <button ng-disabled="start == 0" ng-click="truoc()" class="btn btn-info mr-2">Trước</button>
+            <button ng-disabled="start == 16" ng-click="tiep()" class="btn btn-info">Tiếp</button>
+        </div>
+    </div>
+</div>

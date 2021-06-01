@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quên mật khẩu</title>
+    <link rel="stylesheet" href="../css/quenmatkhau.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body ng-controller="quenmatkhau">
+        <span class="font-weight-bold h3">QUÊN MẬT KHẨU</span>
+        <p class="m-2">Hãy nhập email mà bạn đã dùng để đăng kí tài khoản.</p>
+        <div class="form__group">
+            <input ng-model="email" type="email" class="form__field text-dark"/>
+            <label class="form__label">Email</label>
+            <button ng-click="laymatkhau()" class="btn btn-info mt-3 ml-3">Lấy mật khẩu</button>
+        </div>
+</body>
+<script src="../js/Students.js"></script>
+</html>

@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="../css/trangthi.css">
+<body ng-controller="trangthi">
+    <div class="text-center">
+        <div class="timer text-center" data-seconds-left=900></div>
+        <div class="text-right font-weight-bold">ĐIỂM : {{mark}}</div>
+    </div>
+    <div class="card w-100" ng-repeat="ch in caccauhoi | limitTo:1:begin">
+        <div class="card-header font-weight-bold">TÊN MÔN HỌC </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ch.Text}}</h5>
+          <div class="card-text">
+            <input type="hidden" id="dapAn" value="{{ch.AnswerId}}" /> <!--Lấy mã đáp án-->
+            <label class="form-check" ng-repeat="pa in ch.Answers">
+                <input class="form-check-input" type="radio" name="pa" value="{{pa.Id}}" ng-model="traLoi.checked" id="flexRadioDefault1"/>
+                {{pa.Text}}
+            </label>
+            <input type="hidden" id="cauTraLoi" value="{{traLoi.checked}}"> <!--Lấy đáp án bạn đã chọn-->
+        </div>
+      </div>
+      <div class="card-footer text-dark">
+          <i class="float-left">ĐIỂM : <span>{{ch.Marks}}₫</span></i>
+          <i class="float-right"><button class="btn btn-primary" ng-click="submit()">Tính điểm</button></i>
+          
+      </div>
+    </div>
+    <div class="text-center directional m-2">
+        <button class="btn btn-warning mr-1" ng-disabled="begin == 0" ng-click="dautien()"><i class="fas fa-step-backward"></i></button>
+        <button class="btn btn-warning mr-1" ng-disabled="begin == 0" ng-click="truoc()"><i class="fas fa-backward"></i></button>
+        <button class="btn btn-warning mr-1" ng-disabled="begin == -1" ng-click="sau()"><i class="fas fa-forward"></i></button>
+        <button class="btn btn-warning mr-1" ng-disabled="begin == -1" ng-click="cuoi()"><i class="fas fa-step-forward"></i></button>
+    </div>
+</body>
+<script src="../js/trangthi.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.simple.timer.js"></script>
+<script>
+    $(function(){
+    $('.timer').startTimer();
+  });
+</script>
+</html>
